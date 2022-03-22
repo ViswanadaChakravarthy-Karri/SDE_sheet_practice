@@ -1,0 +1,3 @@
+enter a number:99999
+finally after several tries its working
+i'm ready to practice for nxt 30 Days
