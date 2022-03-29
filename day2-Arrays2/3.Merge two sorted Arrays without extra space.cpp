@@ -13,7 +13,7 @@ void merge(long long arr1[], long long arr2[], int n, int m)
                 // for(i=0,j=gap ; j<m ; i++,j++)
                 // {
                 //     if(i<n && j<n)      swap(arr1[i] , arr1[j]);
-                //     else if(i<n && j>=n)     swap(arr1[i] , arr2[j-n]); ----> why not working????
+                //     else if(i<n && j>=n)     swap(arr1[i] , arr2[j-n]); ----> why not working???? bcz i'm sorting w/o comparing elements
                 //     else if(i>=n && j>=n)    swap(arr2[i-n] , arr2[j-n]);
                 // }
                 
