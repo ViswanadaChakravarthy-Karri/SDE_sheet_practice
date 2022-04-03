@@ -21,3 +21,7 @@ int findDuplicate(vector<int>& nums) {
 // so,we have applied Tortoise-Hare method( Floyd-Cycle Detection )
 
 // this works in O(n) Time and O(1) Space and doesn't Modify orginal array given.
+
+// Why we are not using subtraction of 1..n natural numbers from array sum ??
+// bcz in question mentioned 1 number repeats , but didn't specify how many times it'll repeat..
+// ex: 2 2 2 3 --> here this approach will not work..!!
