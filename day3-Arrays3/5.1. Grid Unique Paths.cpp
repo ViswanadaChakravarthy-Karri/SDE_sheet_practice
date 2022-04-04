@@ -10,7 +10,9 @@ public:
         double result=1;
         for(int i=1 ; i<=r ; i++)
             result = result* (N-r+i) / i;
-        // result = result* (N-i+1) / i; // --> but why this is not working😒
+        // result = result* (N-i+1) / i; // --> but why this is not working, even though looking same 😒
         return result;
     }
 };
+// Time Complexity : O(m-1) or O(n-1)
+// This approach uses combinatorics --> optimised one
