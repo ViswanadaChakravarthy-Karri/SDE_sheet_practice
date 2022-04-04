@@ -6,6 +6,7 @@ public:
         int N = m+n-2;
         int r = m-1; // r can also be m-1, anyhow result will be same 
         
+        if(r > N-r) r = N-r; // Optional
         // try to make some observations ans is Combination( m-1 + n-1 , n-1 or m-1 )
         double result=1;
         for(int i=1 ; i<=r ; i++)
