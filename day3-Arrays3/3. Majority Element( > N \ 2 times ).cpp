@@ -22,5 +22,5 @@ public:
     }
 };
 // Time Complexity: O(n) Space Complexity : O(1)
-// Moore's Voting Algorithm
+// ******** Moore's Voting Algorithm *********
 // Main intuition behind this algorithm is Majority element occurs >floor(N/2) times , where N: size of arr
