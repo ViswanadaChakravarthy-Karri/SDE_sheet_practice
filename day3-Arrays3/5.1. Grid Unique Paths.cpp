@@ -12,7 +12,7 @@ public:
             result = result* (N-r+i) / i;
         // result = result* (N-i+1) / i; // --> but why this is not working, even though looking same 😒
       // what kind of difference does it make
-      // bcz its working in GDBC compiler but not LeetCode
+      //  its working in GDBC compiler but not LeetCode
         return result;
     }
 };
