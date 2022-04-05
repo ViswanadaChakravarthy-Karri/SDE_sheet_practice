@@ -7,11 +7,14 @@ public:
             if(um[target-nums[i]]!=0){
                 ans[0] = i;
                 ans[1] = um[target-nums[i]];
-                if(ans[1]==-1) ans[1] = 0;
+                // decoding the conflict , if necessary
+                if(ans[1]==-1) ans[1] = 0; 
             }
             else if(um[nums[i]]==0){
                 um[nums[i]]=i;
-                if(i==0) um[nums[i]] = -1;
+                if(i==0) um[nums[i]] = -1; 
+                // we are encoding ind '0' as -1 bcz default value for any key in um is '0'
+                // which will be a conflict
             }   
         }
         return ans;
