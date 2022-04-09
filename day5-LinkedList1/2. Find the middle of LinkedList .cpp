@@ -11,7 +11,7 @@ public:
         return slow;
     }
 };
-// Time comp: O(n) Space comp: O(1)
+// Time comp: O(n/2) bcz fast ptr moved to end in n/2 iterations, Space comp: O(1)
 
 // Dry run:
 // NULL (ans:NULL)
