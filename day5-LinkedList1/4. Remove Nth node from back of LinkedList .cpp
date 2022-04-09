@@ -3,17 +3,19 @@ public:
     ListNode* removeNthFromEnd(ListNode* head, int n) {
         
         ListNode *left=head,*right=head,*prev=head;
-        while(--n)                    // *****imp edge case*****
-          right=right->next; 
+        while(--n) right=right->next; // *****imp edge case*****
         while(right->next!=NULL){
             prev=left;
             left=left->next;
             right=right->next;
         }
-        if(prev==left)                // *****imp edge case*****
-          return head->next; 
-        
+        if(prev==left){ // *****imp edge case*****
+            head=head->next;
+            delete(left);
+            return head; 
+        }
         prev->next = prev->next->next;
+        delete(left);
         return head;
     }
 };
