@@ -5,18 +5,17 @@ public:
         dummy_last = dummy = new ListNode(0,NULL); // remember dummy->nxt should be returned.
         
         int carry=0;
-        while(l1 || l2 || carry>0){
-            ListNode *tmp;
+        while(l1 || l2 || carry){
             int sum = 0;
+            if(l1) sum += l1->val, l1 = l1->next;
+            if(l2) sum += l2->val, l2 = l2->next;
             sum += carry;
-            if(l1) sum += l1->val;
-            if(l2) sum += l2->val;
-            tmp = new ListNode(sum % 10,NULL);
             carry = sum / 10;
+            ListNode *tmp = new ListNode(sum % 10,NULL);
             dummy_last = dummy_last->next = tmp;
-            if(l1) l1 = l1->next;
-            if(l2) l2 = l2->next;
         }
         return dummy->next;    
     }
 };
+// Time : O(m+n)
+// probably we have only one solution which is optimal with diffn implementations which might reduce #lines.
