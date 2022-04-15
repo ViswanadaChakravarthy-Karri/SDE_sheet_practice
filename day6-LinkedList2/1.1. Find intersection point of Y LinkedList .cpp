@@ -1,6 +1,5 @@
-class Solution {
-public:
-    ListNode *getIntersectionNode(ListNode *headA, ListNode *headB) {
+// Good but not most optimal
+ListNode *getIntersectionNode(ListNode *headA, ListNode *headB) {
         int m=0,n=0;
         ListNode *i=headA, *j=headB;
         while(i) m++, i=i->next;
