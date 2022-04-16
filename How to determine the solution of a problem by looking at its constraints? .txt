@@ -25,3 +25,19 @@ O(n log n) [Linearithmic time]: Fast comparison-based sorting (eg. Merge Sort)
 O(n) [Linear time]: Linear Search (Finding maximum/minimum element in a 1D array), Counting Sort
 O(log n) [Logarithmic time]: Binary Search, finding GCD (Greatest Common Divisor) using Euclidean Algorithm
 O(1) [Constant time]: Calculation (eg. Solving linear equations in one unknown)
+
+************************************************************************
+Explanations based on Codeforces problems
+
+255D Mr. Bender and Square( https://codeforces.com/problemset/problem/255/D )
+Observe that 1 ≤   n, c  ≤ 109. Referring to the information above, the program's time complexity should be either O(log n) or O(1). Since no O(1) solution exists, we conclude that binary search must be used.
+
+580B Kefa and Company( https://codeforces.com/problemset/problem/580/B )
+In this problem, 1 ≤  n  ≤ 105, which suggests that the time complexity can be either O(n log n) or O(n). It is quite obvious that sorting is required. Therefore, O(n log n) is the correct solution of this problem.
+
+583B Robot's Task( https://codeforces.com/problemset/problem/583/B )
+Notice that n in very small (1 ≤  n  ≤ 1000) in this problem. It means that a O(n2) solution can solve it. We simply need to simulate the robot's moves.
+
+I hope that this can help you figure out the solution of some problems quicker :)
+
+Note: The above method may not always work in all problems. Some may require algorithms that have complex time complexities, while in some problems like 591B Rebranding( https://codeforces.com/problemset/problem/591/B ), the range of n does not match the time complexity of the "optimal" solution. (1 ≤  n, m  ≤ 200 000 suggests that the time complexity is O(n log n) or O(n) but the time complexity of the solution is actually O(1).)
