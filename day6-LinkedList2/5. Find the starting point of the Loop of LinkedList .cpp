@@ -4,19 +4,18 @@ public:
         if(head==NULL)  // here not check for head->nxt bcz at while loop anyhow we're checking 
             return head;
         
-        ListNode *slow=head,*fast=head;
+        ListNode *slow=head,*fast=head,*entry=head;
         
         while(fast->next && fast->next->next){ 
             // for 1st iteration, until now we've checked if head,head->nxt,head->nxt->nxt is NULL
             slow = slow->next;
             fast = fast->next->next;
             if(slow == fast){
-                fast=head;
-                while(fast!=slow){
-                    fast=fast->next;
+                while(entry!=slow){
+                    entry=entry->next;
                     slow=slow->next;
                 }
-                return fast;
+                return slow;
             }
         }
         return NULL;
