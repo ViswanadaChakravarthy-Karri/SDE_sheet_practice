@@ -1,4 +1,5 @@
 // worst case- Time:O(n^3) and Space:O(1)
+// below is optimal solution
 class Solution {
 public:
     void removeDuplicates(vector<int>& nums, int &ptr, bool l_to_r){
