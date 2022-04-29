@@ -1,3 +1,24 @@
 // Brute Force: Time O(n), space: O(1)
 // better : Time O(3n) ,space O(2n)
 // below is optimal one with Time: O(n), Space: O(1)
+
+class Solution {
+public:
+    int trap(vector<int>& height) {
+        int i=0,j=height.size()-1;
+        int water=0,lmax=0,rmax=0;
+        while(i<=j){
+            if(height[i]<=height[j]){
+                if(lmax>height[i]) water += (lmax-height[i]); 
+                else lmax= height[i];
+                i++;
+            }
+            else{
+                if(rmax>height[j]) water += (rmax-height[j]);
+                else rmax = height[j];
+                j--;
+            }
+        }
+        return water;
+    }
+};
