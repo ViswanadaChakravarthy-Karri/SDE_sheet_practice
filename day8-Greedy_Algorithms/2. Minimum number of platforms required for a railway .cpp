@@ -1,4 +1,4 @@
-class Solution{
+class Solution_1{
     public:
     //Function to find the minimum number of platforms required at the
     //railway station such that no train waits.
@@ -27,7 +27,8 @@ class Solution{
         // min_platforms_req to solve problm is max_no_of_platforms_used at any PointOfTime.
         return max_no_of_platforms_used;
     }
+    // Time Complexity: O(nLogn)
+    // Auxiliary Space: O(n)
 };
-// Time Complexity: O(nLogn)
-// Auxiliary Space: O(n)
+
 
