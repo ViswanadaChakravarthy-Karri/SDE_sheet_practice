@@ -1,4 +1,38 @@
-class Solution_2{
+class Solution_1{ // best intuition , to use in interview w/o extra space...!!😳
+    public:
+    //Function to find the minimum number of platforms required at the
+    //railway station such that no train waits.
+    int findPlatform(int arr[], int dep[], int n)
+    {
+        // Pairs cannot be together. Thats the problem. Just think yourself as a station master, 
+        // and you just care how many came and how many went. Not when one came and when went
+        sort(arr,arr+n);
+        sort(dep,dep+n);
+        int plat_needed=1, result=1;
+        // atleast one train will occupy plat, so starting from start_ind( i ) = 1 
+        int i=1,j=0; 
+        while(i<n && j<n)
+        {
+            if(arr[i]<=dep[j]) // train_arrival
+            {
+                plat_needed++;
+                i++;
+            }
+            else // train_departure
+            {
+                plat_needed--;
+                j++;
+            }
+            if(plat_needed > result)
+                result = plat_needed;
+        }
+        return result;
+     }
+//     Time: O(nlogn) for sorting
+//     space: O(1)
+};
+
+class Solution_2{ // here both soln's uses intuition of chocolate_dstribution problem from HackerRank which requires extra space
     public:
     //Function to find the minimum number of platforms required at the
     //railway station such that no train waits.
@@ -10,7 +44,7 @@ class Solution_2{
         }
         return time;
     }
-    int findPlatform(int arr[], int dep[], int n)
+    int findPlatform_1(int arr[], int dep[], int n)
     {
         map<int,int> mpp;
         for(int j=0;j<n;j++)
@@ -29,22 +63,8 @@ class Solution_2{
     }
     // Time Complexity: O(nLogn) bcz of map
     // Auxiliary Space: O(n) bcz of map
-};
-
-
-class Solution_3{
-    public:
-    //Function to find the minimum number of platforms required at the
-    //railway station such that no train waits.
-    int std_timing(int time)
-    {
-        if(time%100 >= 60)
-        {
-            time += 40; // -60 +100
-        }
-        return time;
-    }
-    int findPlatform(int arr[], int dep[], int n)
+    
+    int findPlatform_2(int arr[], int dep[], int n)
     {
         int mpp[2361]={0};
         for(int j=0;j<n;j++)
