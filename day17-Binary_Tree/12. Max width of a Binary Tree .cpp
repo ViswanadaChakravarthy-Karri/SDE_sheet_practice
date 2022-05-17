@@ -24,7 +24,7 @@ public:
             }
             width = max(width,curr_ind+1); // bcz curr_ind itself is the width but starting with 0
         }
-        return width;
+        return (int)width;
     }
     // Time: O(n)
     // Space: O(n)
