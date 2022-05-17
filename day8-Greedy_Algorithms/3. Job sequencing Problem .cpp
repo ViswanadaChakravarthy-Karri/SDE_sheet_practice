@@ -34,4 +34,7 @@ class Solution
     }
 //   TC: O(nlogn) + O(n * m)
 //   SC: O(m)
+// We can use disjoint set to remove the check from last day to first day, 
+// but in Interviews, this solution is what the interviewer usually looks for. 
+// However you can solve COLORFUL ARRAY from SPOJ to understand how to solve this in O(N Log N)
 };
