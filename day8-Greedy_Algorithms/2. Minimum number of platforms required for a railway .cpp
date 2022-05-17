@@ -27,8 +27,8 @@ class Solution_2{
         // min_platforms_req to solve problm is max_no_of_platforms_used at any PointOfTime.
         return max_no_of_platforms_used;
     }
-    // Time Complexity: O(nLogn)
-    // Auxiliary Space: O(n)
+    // Time Complexity: O(nLogn) bcz of map
+    // Auxiliary Space: O(n) bcz of map
 };
 
 
@@ -63,4 +63,5 @@ class Solution_3{
     }
     // Time Complexity: O(n) bcz we are using direct hashing
     // Auxiliary Space: O(1) auxilary space will always req following size ( 0000 ≤ A[i] ≤ D[i] ≤ 2359 )
+    // But in general treat Space as O(n) , to use same approach in other problems as well
 };
