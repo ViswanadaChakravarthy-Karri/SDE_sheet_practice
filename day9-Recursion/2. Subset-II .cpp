@@ -3,8 +3,8 @@ private:
     void findSubsets(int ind, vector<int>& nums, vector<int>& ds, vector<vector<int>>& ans) {
          ans.push_back(ds);
          for (int i = ind; i < nums.size(); i++) {
-            if (i != ind && nums[i] == nums[i - 1]) 
-              continue;
+            // while(i!=ind && i<nums.size() && nums[i]==nums[i-1]) i++; --> why failing..?
+            if (i != ind && nums[i] == nums[i - 1])  continue;  // but its working...!!!
             ds.push_back(nums[i]);
             findSubsets(i + 1, nums, ds, ans);
             ds.pop_back();
