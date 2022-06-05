@@ -29,7 +29,7 @@ void setZeroes(vector<vector<int>>& matrix) {
         if(row_1_status==0){
             for(int j=0;j<n;j++) matrix[0][j]=0;
         }
-    }
+    } 
 // approach_1--> Time:O(m*n)*O(m+n) space:O(1)
 // approach_2--> Time:O(m*n)	    space:O(m+n)
 // approach_3--> Time:O(m*n)	    space:O(1) ----> Optimal approach
